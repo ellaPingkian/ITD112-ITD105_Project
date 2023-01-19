@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+
+{% block cards %}
+<div class="desc">
+  <!-- <p>this is all about the dataset</p> -->
+  <h2 class="title">Philippine Dengue Cases and Deaths 2016-2021</h2>
+  <h4 class="body">The dataset contains confirmed dengue cases and deaths from the Department of Health-Epidemiology Bureau in the Philippines in the years 2016-2021.</h4>
+  <p class="subbody">Notes: Reported dengue cases includes suspect, probable and confirmed. Deaths were included in the total number of cases.</p>
+</div>
+
+<div class="col1">
+  <div class="card1">
+    <div class="grph1">
+      <h4 class="graph-title">CASES AND DEATHS RECORDED PER REGION</h4>
+      {{ div[0] | safe }}
+      {{ script[0] | safe }}
+
+      <h5 class="body">
+        <strong>TABLE 1:</strong> This shows the cases and deaths recorded in the Philippines in 2016-2021 per region, and also shows the mortality rate over the cases recorded. The highest recorded cases are tallied in Region IV-A Calabarzon with a total of 163,177, yet its total deaths recorded is only 653 which makes it 0.4% for the mortality rate of dengue cases in the said region. On the other hand, the highest recorded deaths are tallied in National Capital Region (NCR) with a total of 4009 deaths over 116,147 cases which makes it the second highest mortality rate of all the region recorded.
+      </h5>
+    </div>
+  </div>
+</div>
+
+<div class="col2">
+  <div class="card2">
+    <div class="grph2">
+      <h4 class="graph-title">CASES AND DEATHS RECORDED PER YEAR</h4>
+      {{ div[1] | safe }}
+      {{ script[1] | safe }}
+
+      <h5 class="body">
+        <strong>TABLE 2:</strong> This shows the total number of deaths and cases recorded per year in the span of 6 years (2016-2021), and also the mortality rate tallied in each year. Highest recorded cases were in 2019 with a total of 441,902 cases in that year alone with only 1,733 deaths recorded. Although the cases recorded increased by 287,747 in the span of 3 years, that is between 2017-2019, the deaths recorded decreases as the from 8,127 to 8 from 2016 to first month of 2021. This only means that the Department of Health-Epidemiology Bureau in the Philippines handles the dengue cases better in the recent years.
+      </h5>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,5 @@
+# install Flask
+# install pandas
+# install matplotlib
+# install geoplotlib
+# install geopandas

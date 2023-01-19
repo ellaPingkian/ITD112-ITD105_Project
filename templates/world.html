@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block cards %}
+<div class="desc">
+  <h2 class="title">PHIVOLCS 2022 EARTHQUAKE INFORMATION (Filtered)</h2>
+  <h4 class="body">PHIVOLCS Earthquake Bulletins of latest seismic events in the Philippines are shown as dotmap below. The event parameters (hypocenter, time and magnitude) are determined using incoming data from the Philippine Seismic Network.</h4>
+
+  <p class="subbody">Note: This is a filtered dataset.</p>
+</div>
+
+<div class="col3">
+  <div class="card4">
+    <div class="grph1">
+      <h4 class="graph-title">Earthquakes Recorded in the Philippines 2022</h4>
+      <div class="sec">
+
+        {{ div[0] | safe }}
+        {{ script[0] | safe }}
+
+        <h5 class="bod4">
+          An <strong>earthquake</strong> is a sudden movement of geological materials beneath the earth's surface that causes a weak to intense shaking of the ground.
+          <br><br>
+          The strength of an earthquake can be measured in two ways: <strong>magnitude and intensity</strong>. The magnitude of an earthquake is related to the energy produced at the focus. It is calculated using earthquake data recorded by a seismograph.
+          <br><br>
+          This dot map shows the Earthquakes recorded in the Philippines in 2022. The geographic coordinate system, which is the longitude and latitude are used for pointing epicenters of the earthquake directly on the Philippine map.
+          <br><br>
+          As the dot mop shows, large number of earthquakes are recorded in the eastern of Visayas and down to the southern part of Mindanao and also, notable number of earthquakes recorded in north down to northwest of Luzon.
+          <br><br>
+          One notable earthquake occurred in Itbayat, Batanes with a magnitude of 6.7 on March 23, 2022. 
+
+        </h5>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
+

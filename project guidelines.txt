@@ -1,0 +1,70 @@
+ITD112 - project 
+
+* Project #1
+Using the principles of data story telling develop a Dashboard (web app) for the dengue data from 2016-2021.
+
+Note: (Dataset provided)Additional points if stored in Database
+
+POSSIBLE ANALYSIS 
+* Total number of Dengue Cases by Region
+* Reported Dengue Cases in the Philippines
+* Total number of Dengue Deaths by Region
+
+1. Dot Map - for affected areas (col1, r1 & r2)
+	- also to determine the location where the
+	highest number of dengue occured
+
+	Choropleth - also regional level
+
+1.1 Total number of recorded dengue cases by location
+	Options: By specific location
+		 By region
+
+2. bar graph - sum of deaths caused by dengue in each
+	location (col2, r1)
+	Options: By specific Location
+		 By region
+		 By Year
+
+3. Line graph - reported dengue cases in the Philippines (col2, r2
+	Options: By year
+		 By year by location
+		 By month (2016-2021) this could further
+			determine when is the season where
+			mosquitos breed
+
+
+Note: Include Elements of a Data Story
+1. Context and Setting (Header)
+2. Temporality or time period (Header)
+3. Narration (Body)
+4. Beginning (Body)
+5. End (Body)
+6. Causation and insights (Body)
+	6.1 X-axis
+	6.2 Y-axis
+7. Narration or conclusion from the data visualization (Footer)
+
+
+PRINCIPLES OF DATA STORYTELLING
+1. It needs to be relevant.
+			This means the content of your story should fit the audience’s current level of understanding that will help them reach a goal of some kind.
+
+2. It needs to include good data.
+			This means the data should be from a reliable source and/or collected in a way that truly represents what’s needed to tell a truthful story.
+
+3. There needs to be a clear narratives.
+			There should be a beginning, middle, and end. You need an introduction to the topic and need to conclude with a specific call to action.
+
+4. It should include intentional visuals.
+			The visuals should help the audience easily understand what the data means. It should be appropriate for the data, well-labeled, readable, and never misleading.
+
+***************************************
+
+* Project #2
+Look for a dataset (with Latitude and Longitude features) to develop a dashboard with any of the geoplots (Dot Map, Choropleth, Connection Map).
+
+Integrate in the web app developed.
+
+POSSIBLE ANALYSIS 
+1. 

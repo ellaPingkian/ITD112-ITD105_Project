@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breast Cancer Prediction | ITD105</title>
+
+  <!-- referencing css stylesheet using jinja2 syntax -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main2.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+  
+
+
+</head>
+
+<body>
+  <div class="backg"></div>
+  <main>
+    <div class="content">
+      <header>
+        <div class="header-title">
+          <h2><label for=""><span class="fa-solid fa-bars"></span></label>Dashboard</h2>
+        </div>
+
+        <p class="sec">CLASSIFICATION</p>
+
+        <div class="header-subtitle">
+          <h2>ITD105 PROJECT</h2>
+        </div>
+        
+      </header>
+
+      <div class="cards">
+        <div class="card1">
+          <div class="title"><h2 class="title">About The Dataset</h2></div>
+          <div class="content">
+            <p class="subbody"><strong>Breast cancer</strong> is a disease that has emerged as the second leading cause of cancer deaths in women worldwide. The annual mortality rate is estimated to continue growing. Cancer detection at an early stage could significantly reduce breast cancer death rates long-term.</p>
+            <ul>
+              <h3><strong>9 CYTOLOGICAL FEATURES</strong></h3>
+              <li>Clump Thickness<p style="font-weight: 400; font-size: 18px;"> - indicating grouping of cancer cells in multilayer.</p></li>
+              <li>Uniformity of Cell Size<p style="font-weight: 400; font-size: 18px;">- indicating metastasis to lymph nodes.</p></li>
+              <li>Uniformity of Cell Shape<p style="font-weight: 400; font-size: 18px;"> - identifying cancerous cells of varying size.</p></li>
+              <li>Marginal Adhesion<p style="font-weight: 400; font-size: 18px;"> - suggesting loss of adhesion.</p></li>
+              <li>Single Epithelial Cell Size<p style="font-weight: 400; font-size: 18px;"> - if the SECS become larger, it may be a malignant cell.</p></li>
+              <li>Bare Nuclei<p style="font-weight: 400; font-size: 18px;"> - without cytoplasm coating, found in benign tumors.</p></li>
+              <li>Bland Chromatin<p style="font-weight: 400; font-size: 18px;"> - usually found in benign cells.</p></li>
+              <li>Normal Nucleoli<p style="font-weight: 400; font-size: 18px;"> - generally very small in benign cells.</p></li>
+              <li>Mitoses<p style="font-weight: 400; font-size: 18px;"> - the process in cell division by which the nucleus divides.</p></li>
+            </ul>
+          </div>
+          
+        </div>            
+              
+        <div class="card2">
+          <div class="title"><h2 class="title">Input Details</h2></div>
+          <form action="{{ url_for("classi")}}"  method="post">
+            <div class="form-group">
+              <label for="clump">Clump Thickness</label>
+              <input type="number" name="clump" class="inp" placeholder="(1-10)" required>
+            </div><br>
+            <div class="form-group">
+              <label for="ucsize">Uniformity of Cell Size</label>
+              <input type="number" name="ucsize" class="inp" placeholder="(1-10)" required>
+            </div><br>
+            <div class="form-group">
+              <label for="ucshape">Uniformity of Cell Shape</label>
+              <input type="number" name="ucshape" class="inp" placeholder="(1-10)" required>
+            </div><br>
+            <div class="form-group">
+              <label for="marAd">Marginal Adhesion</label>
+              <input type="number" name="marAd" class="inp" placeholder="(1-10)" required>
+            </div><br>
+            <div class="form-group">
+              <label for="secs">Single Epithelial Cell Size</label>
+              <input type="number" name="secs" class="inp" placeholder="(1-10)" required>
+            </div><br>
+            <div class="form-group">
+              <label for="bare">Bare Nuclei</label>
+              <input type="number" name="bare" class="inp" placeholder="(1-10)" required>
+            </div><br>
+            <div class="form-group">
+              <label for="bland">Bland Chromatin</label>
+              <input type="number" name="bland" class="inp" placeholder="(1-10)" required>
+            </div><br>
+            <div class="form-group">
+              <label for="normNuc">Normal Nucleoli</label>
+              <input type="number" name="normNuc" class="inp" placeholder="(1-10)" required>
+            </div><br>
+            <div class="form-group">
+              <label for="mitosis">Mitoses</label>
+              <input type="number" name="mitosis" class="inp" placeholder="(1-10)" required>
+            </div><br>
+            <button type="submit" name="submit" class="btn">PREDICT</button>
+          </form>
+        </div>
+
+        <div class="card3">
+          <div class="title"><h2 class="title">Result</h2></div>
+          <i class="fa-solid fa-ribbon fa-border-style"></i>
+          <h2 class="res">MOST LIKELY YOU HAVE A:</h2>
+          <h1 class="res">
+            {{ Prediction }}
+          </h1>
+          <a href="/"><i class="fa-solid fa-arrows-rotate"></i></a>
+        </div>
+      </div>
+
+      <div class="footer ">
+        <ul>
+          <li class="active" id="reset"><a href="/" ><span class="fa-solid fa-wine-bottle"></span>Classification</a></li>
+          <li id="reset"><a href="/regression"><span class="fa-solid fa-fish-fins"></span>Regression</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>
